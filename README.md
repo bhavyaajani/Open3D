@@ -27,6 +27,10 @@ The implemented API in C++ has python binding as 'identically_colored_connected_
    - Ensure BUILD_PYBIND11, BUILD_PYTHON_MODULE, BUILD_CPP_EXAMPLES are selected in CMAKE
 4. Project is currently tested on system with Windows 10 (64 bit) OS, VS 2015 compiler, python 3.6 and cmake 3.16
 
+## Unit Tests
+As Open3D unit tests are disabled on windows system no separate unit tests were implemented using google test framework.
+Instead unit tests were written in the CPP example and can be triggered optionally.
+
 ## CPP Example
 Build project 'Solution' under example/CPP. 
 Run generated Solution.exe with command line arguments: <input file (.ply) > < output file > < 0/1 (optionally run unit-tests))
