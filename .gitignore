@@ -56,6 +56,3 @@ examples/Python/Advanced/viewpoint.json
 examples/Python/Basic/copy_of_fragment.pcd
 examples/Python/Basic/copy_of_knot.ply
 examples/Python/Basic/copy_of_lena_color.jpg
-
-#Outputs
-results.txt
