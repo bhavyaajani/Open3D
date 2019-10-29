@@ -166,7 +166,7 @@ bool UnitTests() {
 	return true;
 }
 
-void WriteToFile(open3d::geometry::TriangleMesh::ConnectedComponentList &list, const std::string file)
+void WriteToFile(const open3d::geometry::TriangleMesh::ConnectedComponentList &list, const std::string file)
 {
 	std::ofstream ofs(file);
 

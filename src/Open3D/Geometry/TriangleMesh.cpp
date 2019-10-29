@@ -1374,11 +1374,11 @@ TriangleMesh::ConnectedComponentList TriangleMesh::IdenticallyColoredConnectedCo
 					const Eigen::Vector3d color = vertex_colors_[cidx];
 
 					//adjacency_list uses int as vertex index type whereas it should have been of unsigned type
-					for (size_t nbidx : adjacency_list_[cidx]) {//Check edge connectivity
+					for (const size_t nbidx : adjacency_list_[cidx]) {//Check edge connectivity
 
 						if (!vertex_visited[nbidx]) {
 
-							Eigen::Vector3d nbcolor = vertex_colors_[nbidx];
+							const Eigen::Vector3d nbcolor = vertex_colors_[nbidx];
 
 							if (color == nbcolor) {//Check color similarity
 								vertex_visited[nbidx] = true;
