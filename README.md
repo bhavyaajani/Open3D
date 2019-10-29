@@ -23,14 +23,14 @@ The implemented API in C++ has python binding as 'identically_colored_connected_
 
 1. Clone repository
 2. Ensure GIT sub-modules are initialized and updated
-3. Refer to [BUILD INSTRUCTIONS] (http://www.open3d.org/docs/release/compilation.html)  
-   - Ensure BUILD_PYBIND11, BUILD_PYTHON_MODULE, BUILD_CPP_EXAMPLES
+3. Refer to [BUILD INSTRUCTIONS](http://www.open3d.org/docs/release/compilation.html) for project configuration and build 
+   - Ensure BUILD_PYBIND11, BUILD_PYTHON_MODULE, BUILD_CPP_EXAMPLES are selected in CMAKE
 4. Project is currently tested on system with Windows 10 (64 bit) OS, VS 2015 compiler, python 3.6 and cmake 3.16
 
 ## CPP Example
 Build project 'Solution' under example/CPP. 
-Run generated Solution.exe with command line arguments: <input file (.ply) >  <output file > < 0/1 (optionally run unit-tests))
+Run generated Solution.exe with command line arguments: <input file (.ply) > <output file > < 0/1 (optionally run unit-tests))
 
 ## Python Example
 Ensure build with python binding. Install Open3D python package by building 'install-pip-package' project.
-Run examples\Python\Basic\solution.py python script with command line argument: <input file (.ply) >  <output file >
+Run examples\Python\Basic\solution.py python script with command line argument: <input file (.ply) > <output file >
