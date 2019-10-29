@@ -29,8 +29,8 @@ The implemented API in C++ has python binding as 'identically_colored_connected_
 
 ## CPP Example
 Build project 'Solution' under example/CPP. 
-Run generated Solution.exe with command line arguments: <input file (.ply) > <output file > < 0/1 (optionally run unit-tests))
+Run generated Solution.exe with command line arguments: <input file (.ply) > < output file > < 0/1 (optionally run unit-tests))
 
 ## Python Example
 Ensure build with python binding. Install Open3D python package by building 'install-pip-package' project.
-Run examples\Python\Basic\solution.py python script with command line argument: <input file (.ply) > <output file >
+Run examples\Python\Basic\solution.py python script with command line argument: <input file (.ply) > < output file >
