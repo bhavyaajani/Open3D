@@ -6,15 +6,15 @@ This project is derived from [Open3D](https://github.com/intel-isl/Open3D/tree/v
 
 This API allows computation of identically colored connected components (region of connected vertices) of a given triangular mesh. 
 Component connectedness is established based on:
-1. Topological connectivity - vertices are connected if part of same triangle
-2. Color similarity - vertices share same color property
+1. Topological connectivity - two vertex are connected if part of same triangle
+2. Color similarity - vertex share same color property
  
-Algorithm uses breadth first search (BFS) for graph traversal for establishing topological connectivity. It uses pre-computed adjacency list for faster graph traversal.
-Further for algorithm to work with disconnected graphs, BFS is carried out from all vertex. To improve performance, algorithm maintains memorization to restrict BFS calls to only non-visited vertex. 
+Algorithm uses breadth first search (BFS) for graph traversal to establish topological connectivity. It uses a pre-computed adjacency list for faster graph traversal.
+Further, for algorithm to work with disconnected graphs, BFS is carried out from all vertex. To improve performance, algorithm maintains memorization to restrict BFS calls to only non-visited vertex. 
    
 The output is return as TriangleMesh::ConnectedComponentList, which is a STL Vector, containing all estimated connected components in mesh. Each connected component is defined as STL Set.
-As selection of source vertex for BFS occurs in ascending order of vertex index; the ConnectedComponentList is guranteed to be ordered in ascending order by smallest vertex index in each ConnectedComponent. 
-Further, vertex indices for each connected components are gurantees to be in ascending order due to usage of Set as a container.
+As selection of source vertex for next search of connected component (here BFS) occurs in ascending order of vertex index; the ConnectedComponentList is guranteed to be ordered in ascending order by smallest vertex index in each ConnectedComponent. 
+Further, vertex indices within each connected components are assured to be in ascending order due to usage of Set as a container.
 
 ## Python Binding
 The implemented API in C++ has python binding as 'identically_colored_connected_components' method in  TriangleMesh class.
